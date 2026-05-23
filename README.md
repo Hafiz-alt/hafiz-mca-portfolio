@@ -2,6 +2,8 @@
 
 A personal portfolio website for Hafiz Muhammed P H, presenting full-stack and AI/ML projects, technical skills, contact information, and a downloadable resume.
 
+[View Live Portfolio](https://hafiz-mca-portfolio.onrender.com/)
+
 ## Tech Stack
 
 - Flask
