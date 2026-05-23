@@ -85,6 +85,8 @@ After the site is published, submit the form once and open the FormSubmit activa
 
 Create a new **Web Service** in Render and connect this GitHub repository.
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Hafiz-alt/hafiz-mca-portfolio)
+
 Use the following service settings:
 
 | Setting | Value |
