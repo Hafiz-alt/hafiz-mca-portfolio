@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafiz Muhammed P H | Full Stack & AI/ML Developer</title>
+    <meta name="description"
+        content="Portfolio of Hafiz Muhammed P H, a Full Stack and AI/ML Developer building deployed web, mobile, and machine learning products.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+    <!-- Animated Aurora Background -->
+    <div class="aurora-container">
+        <div class="aurora orb-1"></div>
+        <div class="aurora orb-2"></div>
+        <div class="aurora orb-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#home" class="logo">
+                    <span class="logo-icon"><i class="fas fa-code"></i></span>
+                    <span class="logo-text">Hafiz<span class="accent">.dev</span></span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== HERO SECTION ===== -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        <span>Open to internships and entry-level roles</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        <span class="hero-greeting">Hi, I'm</span>
+                        <span class="hero-name gradient-text">Hafiz Muhammed P H</span>
+                    </h1>
+                    
+                    <p class="hero-subtitle">
+                        Full Stack & AI/ML Developer building deployed products with
+                        <span class="highlight">React</span>, <span class="highlight">Flask</span>,
+                        <span class="highlight">React Native</span>, and <span class="highlight">TensorFlow</span>.
+                    </p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number counter" data-target="3">0</span>
+                            <span class="stat-label">Live Products</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number counter" data-target="8">0</span>
+                            <span class="stat-label">+ GitHub Projects</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">2025</span>
+                            <span class="stat-label">Best Project Award</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="{{ url_for('static', filename='docs/Hafiz_Resume.pdf') }}" target="_blank" class="btn btn-secondary">
+                            <span><i class="fas fa-file-arrow-down"></i> View Resume</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="profile-card">
+                        <div class="profile-ring">
+                            <div class="ring ring-1"></div>
+                            <div class="ring ring-2"></div>
+                            <div class="ring ring-3"></div>
+                        </div>
+                        <div class="profile-image-wrapper">
+                            <img src="{{ url_for('static', filename='images/hafiz-professional-portrait.jpeg') }}"
+                                 alt="Hafiz Muhammed P H" class="profile-image" fetchpriority="high">
+                        </div>
+                        <div class="profile-badge badge-1">
+                            <i class="fas fa-rocket"></i>
+                            <span>React + Supabase</span>
+                        </div>
+                        <div class="profile-badge badge-2">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>React Native</span>
+                        </div>
+                        <div class="profile-badge badge-3">
+                            <i class="fas fa-brain"></i>
+                            <span>AI / ML</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <span class="scroll-text">Scroll to explore</span>
+                <div class="scroll-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT SECTION ===== -->
+        <section id="about" class="section about">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">About Me</span>
+                    <h2 class="section-title">Who I Am <span class="title-icon"><i class="fas fa-user"></i></span></h2>
+                    <p class="section-subtitle">A passionate developer turning ideas into digital experiences</p>
+                </div>
+                
+                <div class="about-grid reveal">
+                    <div class="about-content">
+                        <div class="content-card">
+                            <p class="content-text">
+                                I am pursuing my <strong>Master of Computer Applications</strong> at
+                                <span class="highlight-link">Rajagiri College of Social Sciences</span>, Kochi,
+                                after completing my BCA at SCMS School of Technology and Management.
+                            </p>
+                            <p class="content-text">
+                                I build <strong>web and mobile applications</strong> with React, React Native,
+                                Flask, Django and Supabase, and develop <strong>machine learning</strong>
+                                experiences with TensorFlow/Keras and LLM APIs.
+                            </p>
+                            <p class="content-text">
+                                My work includes an award-winning e-waste platform, an offline-first parking app,
+                                and a Docker-deployed Indian Sign Language recognition demo.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Education</h4>
+                                <p>MCA, RCSS Kochi (2025-2027)</p>
+                            </div>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Passion</h4>
+                                <p>Full Stack & AI/ML</p>
+                            </div>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Location</h4>
+                                <p>Kochi, Kerala</p>
+                            </div>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Achievement</h4>
+                                <p>Best Project Award 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SKILLS SECTION ===== -->
+        <section id="skills" class="section skills">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Technical Skills</span>
+                    <h2 class="section-title">My Tech Stack <span class="title-icon"><i class="fas fa-cogs"></i></span></h2>
+                    <p class="section-subtitle">Technologies I use to bring ideas to life</p>
+                </div>
+                
+                <div class="skills-container">
+                    <!-- Frontend -->
+                    <div class="skill-category reveal">
+                        <div class="category-header">
+                            <i class="fab fa-js-square"></i>
+                            <h3>Frontend Development</h3>
+                        </div>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="HTML5">
+                                <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                                <span class="skill-name">HTML5</span>
+                            </div>
+                            <div class="skill-item" data-skill="CSS3">
+                                <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                                <span class="skill-name">CSS3</span>
+                            </div>
+                            <div class="skill-item" data-skill="JavaScript">
+                                <div class="skill-icon"><i class="fab fa-js"></i></div>
+                                <span class="skill-name">JavaScript</span>
+                            </div>
+                            <div class="skill-item" data-skill="React">
+                                <div class="skill-icon"><i class="fab fa-react"></i></div>
+                                <span class="skill-name">React</span>
+                            </div>
+                            <div class="skill-item" data-skill="React Native">
+                                <div class="skill-icon"><i class="fab fa-react"></i></div>
+                                <span class="skill-name">React Native</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Backend & Databases -->
+                    <div class="skill-category reveal">
+                        <div class="category-header">
+                            <i class="fas fa-server"></i>
+                            <h3>Backend & Databases</h3>
+                        </div>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="Python">
+                                <div class="skill-icon"><i class="fab fa-python"></i></div>
+                                <span class="skill-name">Python</span>
+                            </div>
+                            <div class="skill-item" data-skill="Django">
+                                <div class="skill-icon"><i class="fas fa-server"></i></div>
+                                <span class="skill-name">Django</span>
+                            </div>
+                            <div class="skill-item" data-skill="SQL">
+                                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                                <span class="skill-name">SQL</span>
+                            </div>
+                            <div class="skill-item" data-skill="Flask">
+                                <div class="skill-icon"><i class="fab fa-python"></i></div>
+                                <span class="skill-name">Flask</span>
+                            </div>
+                            <div class="skill-item" data-skill="MySQL">
+                                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                                <span class="skill-name">MySQL</span>
+                            </div>
+                            <div class="skill-item" data-skill="Supabase">
+                                <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                                <span class="skill-name">Supabase</span>
+                            </div>
+                            <div class="skill-item" data-skill="SQLite">
+                                <div class="skill-icon"><i class="fas fa-file-alt"></i></div>
+                                <span class="skill-name">SQLite</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- AI, Cloud & Tools -->
+                    <div class="skill-category reveal">
+                        <div class="category-header">
+                            <i class="fas fa-tools"></i>
+                            <h3>AI/ML, Cloud & Tools</h3>
+                        </div>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="Git">
+                                <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                                <span class="skill-name">Git & GitHub</span>
+                            </div>
+                            <div class="skill-item" data-skill="VSCode">
+                                <div class="skill-icon"><i class="fas fa-code"></i></div>
+                                <span class="skill-name">VS Code</span>
+                            </div>
+                            <div class="skill-item" data-skill="TensorFlow">
+                                <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                                <span class="skill-name">TensorFlow / Keras</span>
+                            </div>
+                            <div class="skill-item" data-skill="Vercel">
+                                <div class="skill-icon"><i class="fas fa-triangle"></i></div>
+                                <span class="skill-name">Vercel</span>
+                            </div>
+                            <div class="skill-item" data-skill="Docker">
+                                <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                                <span class="skill-name">Docker</span>
+                            </div>
+                            <div class="skill-item" data-skill="HuggingFace">
+                                <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                                <span class="skill-name">Hugging Face Spaces</span>
+                            </div>
+                            <div class="skill-item" data-skill="LLM APIs">
+                                <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                                <span class="skill-name">LLM APIs</span>
+                            </div>
+                            <div class="skill-item" data-skill="Expo">
+                                <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+                                <span class="skill-name">Expo / EAS Build</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS SECTION ===== -->
+        <section id="projects" class="section projects">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">My Work</span>
+                    <h2 class="section-title">Featured Projects <span class="title-icon"><i class="fas fa-project-diagram"></i></span></h2>
+                    <p class="section-subtitle">Products I designed, built, and shipped across web, mobile, and AI</p>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card reveal">
+                        <div class="project-header">
+                            <div class="project-badge award">
+                                <i class="fas fa-trophy"></i>
+                                <span>Best Project Award</span>
+                            </div>
+                            <div class="project-icons">
+                                <i class="fab fa-react" title="React"></i>
+                                <i class="fas fa-database" title="Supabase"></i>
+                            </div>
+                        </div>
+                        <h3 class="project-title">ExoWaste</h3>
+                        <p class="project-description">
+                            Award-winning e-waste platform for pickup requests, collection centres and status
+                            tracking, with authenticated user and admin workflows backed by Supabase.
+                        </p>
+                        <div class="project-footer">
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Vite</span>
+                                <span>Supabase</span>
+                                <span>Vercel</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://exowaste.vercel.app/" target="_blank" rel="noopener" class="project-link">
+                                    <i class="fas fa-arrow-up-right-from-square"></i> Live App
+                                </a>
+                                <a href="https://github.com/Hafiz-alt/ewastefinalproject" target="_blank" rel="noopener" class="project-link muted">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 2 -->
+                    <article class="project-card reveal">
+                        <div class="project-header">
+                            <div class="project-badge status">
+                                <i class="fas fa-circle"></i>
+                                <span>Live Demo</span>
+                            </div>
+                            <div class="project-icons">
+                                <i class="fab fa-python" title="Python"></i>
+                                <i class="fas fa-brain" title="Machine Learning"></i>
+                                <i class="fab fa-docker" title="Docker"></i>
+                            </div>
+                        </div>
+                        <h3 class="project-title">ISL Translator</h3>
+                        <p class="project-description">
+                            Real-time Indian Sign Language to text and speech recognition using MobileNetV2,
+                            webcam inference and offline TTS, packaged in Docker and deployed on Hugging Face Spaces.
+                        </p>
+                        <div class="project-footer">
+                            <div class="project-tech">
+                                <span>Flask</span>
+                                <span>TensorFlow</span>
+                                <span>MobileNetV2</span>
+                                <span>Docker</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://huggingface.co/spaces/hafiz88172/ISL-Translator" target="_blank" rel="noopener" class="project-link">
+                                    <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/Hafiz-alt/Sign-Language-Translator" target="_blank" rel="noopener" class="project-link muted">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 3 -->
+                    <article class="project-card reveal">
+                        <div class="project-header">
+                            <div class="project-badge mobile">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Mobile App</span>
+                            </div>
+                            <div class="project-icons">
+                                <i class="fab fa-react" title="React Native"></i>
+                                <i class="fas fa-location-dot" title="Location"></i>
+                                <i class="fab fa-android" title="Android"></i>
+                            </div>
+                        </div>
+                        <h3 class="project-title">SpotSaver</h3>
+                        <p class="project-description">
+                            Offline-first parking tracker for saving GPS locations, photos, notes, vehicles and
+                            countdown reminders, built as a typed React Native app with an APK release workflow.
+                        </p>
+                        <div class="project-footer">
+                            <div class="project-tech">
+                                <span>React Native</span>
+                                <span>Expo</span>
+                                <span>TypeScript</span>
+                                <span>AsyncStorage</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Hafiz-alt/spotsaver" target="_blank" rel="noopener" class="project-link muted">
+                                    <i class="fab fa-github"></i> View Project
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4 -->
+                    <article class="project-card reveal">
+                        <div class="project-header">
+                            <div class="project-badge status">
+                                <i class="fas fa-message"></i>
+                                <span>LLM App</span>
+                            </div>
+                            <div class="project-icons">
+                                <i class="fab fa-python" title="Python"></i>
+                                <i class="fas fa-bolt" title="Groq API"></i>
+                            </div>
+                        </div>
+                        <h3 class="project-title">AI Web Assistant</h3>
+                        <p class="project-description">
+                            Flask conversational assistant integrating the Groq API with prompt-engineered,
+                            multi-turn responses in a simple web experience.
+                        </p>
+                        <div class="project-footer">
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Flask</span>
+                                <span>Groq API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Hafiz-alt/my_ai_assistant" target="_blank" rel="noopener" class="project-link muted">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5 -->
+                    <article class="project-card reveal">
+                        <div class="project-header">
+                            <div class="project-badge package">
+                                <i class="fas fa-box"></i>
+                                <span>Python Package</span>
+                            </div>
+                            <div class="project-icons">
+                                <i class="fab fa-python" title="Python"></i>
+                            </div>
+                        </div>
+                        <h3 class="project-title">OddEvenLibrary</h3>
+                        <p class="project-description">
+                            A published Python package project covering reusable module design, packaging,
+                            metadata, versioning and tests.
+                        </p>
+                        <div class="project-footer">
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>PyPI</span>
+                                <span>Unit Tests</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Hafiz-alt/oddevenlibrary" target="_blank" rel="noopener" class="project-link muted">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT SECTION ===== -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2 class="section-title">Let's Connect <span class="title-icon"><i class="fas fa-paper-plane"></i></span></h2>
+                    <p class="section-subtitle">Open to full-stack and AI/ML internship or entry-level opportunities</p>
+                </div>
+                
+                <div class="contact-wrapper reveal">
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contactForm"
+                              action="https://formsubmit.co/ajax/hafizmdph88172@gmail.com" method="POST">
+                            <input type="hidden" name="_subject" value="New portfolio enquiry - Hafiz.dev">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off"
+                                   aria-hidden="true">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                                <span class="form-icon"><i class="fas fa-user"></i></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                                <span class="form-icon"><i class="fas fa-envelope"></i></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="" disabled selected>Select a topic</option>
+                                    <option value="collaboration">Collaboration</option>
+                                    <option value="freelance">Freelance Work</option>
+                                    <option value="job">Job Opportunity</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <span class="form-icon"><i class="fas fa-tag"></i></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
+                                <span class="form-icon"><i class="fas fa-pencil-alt"></i></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <span class="submit-label">Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                            <p class="form-note">Messages are delivered securely to my email inbox.</p>
+                        </form>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="contact-info-container">
+                        <div class="contact-info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email</h4>
+                                <a href="mailto:hafizmdph88172@gmail.com">hafizmdph88172@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-file-lines"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Resume</h4>
+                                <a href="{{ url_for('static', filename='docs/Hafiz_Resume.pdf') }}" target="_blank">
+                                    View Resume
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="info-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/hafiz-muhammed-87a76a304" target="_blank" rel="noopener">
+                                    View Profile
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="info-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/Hafiz-alt" target="_blank" rel="noopener">
+                                    View Projects
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Location</h4>
+                                <span>Kochi, Kerala, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#home" class="logo">
+                        <span class="logo-icon"><i class="fas fa-code"></i></span>
+                        <span class="logo-text">Hafiz<span class="accent">.dev</span></span>
+                    </a>
+                </div>
+                <p class="footer-text">
+                    &copy; 2026 Hafiz Muhammed P H. All rights reserved.
+                </p>
+                <p class="footer-credit">
+                    Made with <span class="heart"><i class="fas fa-heart"></i></span> using Flask & Python
+                </p>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/Hafiz-alt" target="_blank" rel="noopener" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/hafiz-muhammed-87a76a304" target="_blank" rel="noopener" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:hafizmdph88172@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="{{ url_for('static', filename='docs/Hafiz_Resume.pdf') }}" target="_blank" class="social-link"
+                   title="View resume">
+                    <i class="fas fa-file-lines"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Form Submission Modal -->
+    <div class="modal" id="formModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-content">
+            <div class="modal-icon success">
+                <i class="fas fa-check"></i>
+            </div>
+            <h3 id="modalTitle">Message Sent</h3>
+            <p id="modalMessage">Thank you for reaching out. I will get back to you soon.</p>
+            <button class="btn btn-primary" id="closeModal">Close</button>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
