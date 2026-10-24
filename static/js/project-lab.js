@@ -373,7 +373,12 @@
         object.scale.lerp(new THREE.Vector3(targetScale, targetScale, targetScale), 0.09);
       });
       if (!dragging && !userInteracted && !reducedMotion) root.rotation.y = Math.sin(time * 0.18) * 0.045;
-      renderer.render(scene, camera);
+      try {
+        renderer.render(scene, camera);
+      } catch (error) {
+        showFallback("WebGL rendering failed in this browser. Use the project selector to explore all projects.");
+        return;
+      }
       window.requestAnimationFrame(animate);
     };
 
