@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hafiz Muhammed P H | Full Stack & AI/ML Developer</title>
     <meta name="description"
-        content="Portfolio of Hafiz Muhammed P H, a Full Stack and AI/ML Developer building deployed web, mobile, and machine learning products.">
+        content="Hafiz Muhammed P H — full-stack and AI/ML developer building thoughtful web, mobile, and machine learning products. Explore award-winning work, shipped apps, and interactive project demos.">
     <link rel="canonical" href="https://hafiz-mca-portfolio.onrender.com/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Hafiz Muhammed P H | Full Stack & AI/ML Developer">
@@ -23,6 +23,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/portfolio-refresh.css') }}">
 </head>
 
 <body>
@@ -166,8 +167,13 @@
                             </p>
                             <p class="content-text">
                                 My work includes an award-winning e-waste platform, an offline-first parking app,
-                                and a Docker-deployed Indian Sign Language recognition demo.
+                                and a real-time Indian Sign Language recognition system. I also build AI-assisted
+                                workflows with a focus on reliable product behaviour, not just a chatbot demo.
                             </p>
+                            <div class="experience-note">
+                                <span class="experience-note-mark"><i class="fas fa-code"></i></span>
+                                <div><span class="experience-kicker">CURRENT EXPERIENCE</span><strong>Web Developer · RLabz, Rajagiri College</strong><p>Building a faculty recruitment platform with Django and translating stakeholder requirements into usable workflows.</p></div>
+                            </div>
                         </div>
                     </div>
                     
@@ -345,9 +351,78 @@
                     <p class="section-subtitle">Products I designed, built, and shipped across web, mobile, and AI</p>
                 </div>
                 
+                
+                <div class="project-lab reveal" id="projectLab" aria-label="Interactive three-dimensional project explorer">
+                    <div class="lab-topline">
+                        <div>
+                            <span class="lab-kicker">INTERACTIVE PROJECT FIELD</span>
+                            <h3>Explore the workbench.</h3>
+                            <p>Choose a project artifact to inspect what it does, how it was built, and where to explore the real product.</p>
+                        </div>
+                        <span class="lab-instruction"><i class="fas fa-arrows-rotate"></i> Drag to orbit <span>·</span> Select to inspect</span>
+                    </div>
+                    <div class="lab-layout">
+                        <div class="lab-stage" id="projectLabStage">
+                            <canvas id="projectLabCanvas" aria-label="Interactive 3D workstation. Drag to rotate and click a project artifact." tabindex="0"></canvas>
+                            <div class="lab-stage-meta">
+                                <span><span class="lab-live-dot"></span> REAL PROJECTS / REAL CODE</span>
+                                <span id="labSceneStatus">SCENE 01 — READY</span>
+                            </div>
+                            <div class="lab-fallback" id="projectLabFallback" role="status">
+                                <i class="fas fa-cubes"></i>
+                                <strong>Project workbench</strong>
+                                <span>Use the project selector to inspect each build.</span>
+                            </div>
+                        </div>
+                        <aside class="lab-detail" aria-live="polite">
+                            <div class="lab-detail-head">
+                                <span class="lab-category" id="labCategory">AI PRODUCT ENGINEERING</span>
+                                <span class="lab-number" id="labNumber">01 / 04</span>
+                            </div>
+                            <h4 id="labTitle">FlowPilot</h4>
+                            <p id="labDescription">An AI-powered project management platform that turns live project context into task plans, sprint risk analysis, and weekly reports.</p>
+                            <div class="lab-tech" id="labTech"><span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Groq API</span></div>
+                            <div class="lab-divider"></div>
+                            <div class="lab-detail-actions">
+                                <a class="btn btn-primary lab-open-link" id="labLiveLink" href="https://flowpilot-ai-virid.vercel.app" target="_blank" rel="noopener"><span>Open live product</span><i class="fas fa-arrow-up-right-from-square"></i></a>
+                                <a class="lab-code-link" id="labCodeLink" href="https://github.com/Hafiz-alt/flowpilot-ai" target="_blank" rel="noopener"><i class="fab fa-github"></i><span>Inspect the source</span><i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="lab-selector" role="group" aria-label="Choose a project">
+                                <button type="button" class="lab-select is-active" data-project-select="flowpilot" aria-pressed="true"><span>01</span> FlowPilot</button>
+                                <button type="button" class="lab-select" data-project-select="isl" aria-pressed="false"><span>02</span> ISL Translator</button>
+                                <button type="button" class="lab-select" data-project-select="spotsaver" aria-pressed="false"><span>03</span> SpotSaver</button>
+                                <button type="button" class="lab-select" data-project-select="exowaste" aria-pressed="false"><span>04</span> ExoWaste</button>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+
                 <div class="projects-grid">
                     <!-- Project 1 -->
-                    <article class="project-card reveal">
+                    
+                    <article class="project-card reveal featured-project" data-project-card="flowpilot">
+                        <div class="project-art art-flowpilot" aria-hidden="true">
+                            <span class="art-caption">AI WORKFLOW INTELLIGENCE</span>
+                            <div class="dash-window">
+                                <div class="dash-window-top"><span></span><span></span><span></span><b>flowpilot / overview</b></div>
+                                <div class="dash-window-body"><div class="dash-sidebar"><i></i><i></i><i></i><i></i></div><div class="dash-main"><div class="dash-line long"></div><div class="dash-line short"></div><div class="dash-metrics"><i></i><i></i><i></i></div><div class="dash-chart"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div></div>
+                            </div>
+                            <span class="art-index">FP / 01</span>
+                        </div>
+                        <div class="project-header"><div class="project-badge status"><i class="fas fa-wand-magic-sparkles"></i><span>AI Product</span></div><div class="project-icons"><i class="fab fa-js-square" title="TypeScript"></i><i class="fas fa-diagram-project" title="Workflow automation"></i></div></div>
+                        <h3 class="project-title">FlowPilot</h3>
+                        <p class="project-description">An AI-powered project management platform that generates task breakdowns, sprint risk analysis and weekly status reports from live project context, with a deterministic fallback when the AI provider is unavailable.</p>
+                        <div class="project-footer"><div class="project-tech"><span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Prisma</span><span>Groq API</span></div><div class="project-links"><a href="https://flowpilot-ai-virid.vercel.app" target="_blank" rel="noopener" class="project-link"><i class="fas fa-arrow-up-right-from-square"></i> Live App</a><a href="https://github.com/Hafiz-alt/flowpilot-ai" target="_blank" rel="noopener" class="project-link muted"><i class="fab fa-github"></i> Code</a></div></div>
+                    </article>
+
+<article class="project-card reveal">
+
+                        <div class="project-art art-exowaste" aria-hidden="true">
+                            <span class="art-caption">CIRCULAR ECONOMY / 2025</span>
+                            <div class="eco-orbit"></div><div class="eco-core"><i class="fas fa-leaf"></i></div>
+                            <div class="eco-node eco-node-a"><i class="fas fa-recycle"></i></div><div class="eco-node eco-node-b"><i class="fas fa-microchip"></i></div>
+                            <span class="art-index">EXO / 01</span>
+                        </div>
                         <div class="project-header">
                             <div class="project-badge award">
                                 <i class="fas fa-trophy"></i>
@@ -383,6 +458,12 @@
                     
                     <!-- Project 2 -->
                     <article class="project-card reveal">
+
+                        <div class="project-art art-isl" aria-hidden="true">
+                            <span class="art-caption">COMPUTER VISION / LIVE INFERENCE</span>
+                            <div class="isl-frame"><span class="isl-status"><i></i> CAMERA INPUT</span><div class="isl-hand"><i></i><i></i><i></i><i></i><i></i><b></b></div><div class="isl-readout"><span>CLASS</span><strong>HELLO</strong><span>MODEL OUTPUT</span></div></div>
+                            <span class="art-index">ISL / 02</span>
+                        </div>
                         <div class="project-header">
                             <div class="project-badge status">
                                 <i class="fas fa-circle"></i>
@@ -419,6 +500,13 @@
                     
                     <!-- Project 3 -->
                     <article class="project-card reveal">
+
+                        <div class="project-art art-spotsaver" aria-hidden="true">
+                            <span class="art-caption">LOCATION MEMORY / MOBILE</span>
+                            <div class="map-grid"></div><div class="map-route"></div><div class="map-point point-a"></div><div class="map-point point-b"></div>
+                            <div class="map-pin"><i class="fas fa-location-dot"></i></div><div class="map-label">SAVED LOCATION <b>00:42:18</b></div>
+                            <span class="art-index">SPOT / 03</span>
+                        </div>
                         <div class="project-header">
                             <div class="project-badge mobile">
                                 <i class="fas fa-mobile-alt"></i>
@@ -452,6 +540,12 @@
 
                     <!-- Project 4 -->
                     <article class="project-card reveal">
+
+                        <div class="project-art art-terminal" aria-hidden="true">
+                            <span class="art-caption">LLM / CONVERSATIONAL SYSTEM</span>
+                            <div class="terminal-window"><div class="terminal-bar"><i></i><i></i><i></i></div><div><span class="term-green">› prompt</span> understand intent</div><div><span class="term-gold">› model</span> generate response</div><div><span class="term-green">✓ output</span> ready to review</div></div>
+                            <span class="art-index">LLM / 04</span>
+                        </div>
                         <div class="project-header">
                             <div class="project-badge status">
                                 <i class="fas fa-message"></i>
@@ -483,6 +577,13 @@
 
                     <!-- Project 5 -->
                     <article class="project-card reveal">
+
+                        <div class="project-art art-package" aria-hidden="true">
+                            <span class="art-caption">PYTHON / REUSABLE TOOLING</span>
+                            <div class="pkg-cube"><i class="fas fa-cubes"></i><span>pip install</span><strong>oddevenlibrary</strong></div>
+                            <span class="pkg-orbit pkg-orbit-a"></span><span class="pkg-orbit pkg-orbit-b"></span>
+                            <span class="art-index">PY / 05</span>
+                        </div>
                         <div class="project-header">
                             <div class="project-badge package">
                                 <i class="fas fa-box"></i>
@@ -677,7 +778,9 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.128.0/three.min.js" defer></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/project-lab.js') }}" defer></script>
 </body>
 
 </html>
