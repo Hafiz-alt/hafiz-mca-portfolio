@@ -49,7 +49,7 @@
     }
   };
 
-  document.addEventListener("DOMContentLoaded", () => {
+  const initProjectLab = () => {
     const canvas = document.getElementById("projectLabCanvas");
     const stage = document.getElementById("projectLabStage");
     if (!canvas || !stage) return;
@@ -382,5 +382,78 @@
     resize();
     selectProject("flowpilot");
     animate();
-  });
+  };
+
+  const showFallback = (message) => {
+    const canvas = document.getElementById("projectLabCanvas");
+    const fallback = document.getElementById("projectLabFallback");
+    const status = document.getElementById("labSceneStatus");
+    if (canvas) canvas.style.display = "none";
+    if (fallback) {
+      fallback.classList.add("visible");
+      const copy = fallback.querySelector("span");
+      if (copy) copy.textContent = message || "3D graphics could not start here. Use the project selector to explore the work.";
+    }
+    if (status) status.textContent = "PROJECT SELECTOR READY";
+  };
+
+  const bootProjectLab = () => {
+    if (window.THREE) {
+      try { initProjectLab(); } catch (error) { showFallback("3D engine error. The project selector is still available."); }
+      return;
+    }
+    const sources = [
+      "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.128.0/three.min.js",
+      "https://unpkg.com/three@0.128.0/build/three.min.js",
+      "https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"
+    ];
+    let index = 0;
+    const tryNextSource = () => {
+      if (window.THREE) {
+        try { initProjectLab(); } catch (error) { showFallback("3D engine error. The project selector is still available."); }
+        return;
+      }
+      if (index >= sources.length) {
+        showFallback("The 3D library could not load. Use the project selector to explore every project.");
+        return;
+      }
+      const script = document.createElement("script");
+      script.src = sources[index++];
+      script.async = true;
+      let settled = false;
+      const timer = window.setTimeout(() => {
+        if (settled) return;
+        settled = true;
+        script.remove();
+        tryNextSource();
+      }, 7000);
+      script.onload = () => {
+        if (settled) return;
+        settled = true;
+        window.clearTimeout(timer);
+        if (window.THREE) {
+          try { initProjectLab(); } catch (error) { showFallback("3D engine error. The project selector is still available."); }
+        } else {
+          script.remove();
+          tryNextSource();
+        }
+      };
+      script.onerror = () => {
+        if (settled) return;
+        settled = true;
+        window.clearTimeout(timer);
+        script.remove();
+        tryNextSource();
+      };
+      document.head.appendChild(script);
+    };
+    tryNextSource();
+  };
+
+  const boot = () => bootProjectLab();
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot, { once: true });
+  } else {
+    boot();
+  }
 })();
