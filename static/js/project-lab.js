@@ -66,6 +66,8 @@
     const selectors = Array.from(document.querySelectorAll("[data-project-select]"));
     const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let activeProject = "flowpilot";
+    const artifacts = {};
+    let renderOnce = () => {};
 
     const selectProject = (key) => {
       const data = PROJECTS[key];
@@ -146,7 +148,6 @@
 
     const root = new THREE.Group();
     scene.add(root);
-    const artifacts = {};
     const clickable = [];
     const sharedMaterial = (color, roughness, metalness, emissive) => new THREE.MeshStandardMaterial({
       color,
@@ -360,7 +361,7 @@
     });
 
     const clock = new THREE.Clock();
-    const renderOnce = () => renderer.render(scene, camera);
+    renderOnce = () => renderer.render(scene, camera);
     const animate = () => {
       const time = clock.getElapsedTime();
       Object.entries(artifacts).forEach(([key, object]) => {
