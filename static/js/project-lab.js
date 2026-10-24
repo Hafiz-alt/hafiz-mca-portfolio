@@ -382,6 +382,8 @@
     resize();
     selectProject("flowpilot");
     animate();
+    if (fallback) fallback.classList.remove("visible");
+    if (sceneStatus) sceneStatus.textContent = "SCENE 01 — READY";
   };
 
   const showFallback = (message) => {
