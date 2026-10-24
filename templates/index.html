@@ -366,12 +366,12 @@
                             <canvas id="projectLabCanvas" aria-label="Interactive 3D workstation. Drag to rotate and click a project artifact." tabindex="0"></canvas>
                             <div class="lab-stage-meta">
                                 <span><span class="lab-live-dot"></span> REAL PROJECTS / REAL CODE</span>
-                                <span id="labSceneStatus">SCENE 01 — READY</span>
+                                <span id="labSceneStatus">LOADING 3D ENGINE</span>
                             </div>
-                            <div class="lab-fallback" id="projectLabFallback" role="status">
-                                <i class="fas fa-cubes"></i>
-                                <strong>Project workbench</strong>
-                                <span>Use the project selector to inspect each build.</span>
+                            <div class="lab-fallback visible" id="projectLabFallback" role="status">
+                                <i class="fas fa-circle-notch fa-spin"></i>
+                                <strong>Starting the 3D workbench</strong>
+                                <span>Loading the interactive scene…</span>
                             </div>
                         </div>
                         <aside class="lab-detail" aria-live="polite">
@@ -778,7 +778,6 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.128.0/three.min.js" defer></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <script src="{{ url_for('static', filename='js/project-lab.js') }}" defer></script>
 </body>
